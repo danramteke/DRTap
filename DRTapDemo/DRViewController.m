@@ -7,6 +7,7 @@
 //
 
 #import "DRViewController.h"
+#import "NSObject+DRTap.h"
 
 @interface DRViewController ()
 
@@ -14,16 +15,27 @@
 
 @implementation DRViewController
 
+-(void)loadView {
+    self.view = [[[UIView alloc] init] tap:^(UIView* obj) {
+        obj.backgroundColor = [UIColor blueColor];
+    }];
+    
+    UILabel* label = [[[UILabel alloc] init] tap:^(UILabel* lbl){
+        lbl.text = @"Hello";
+        lbl.textColor = [UIColor whiteColor];
+        lbl.font = [UIFont systemFontOfSize:88];
+        lbl.backgroundColor = [UIColor blackColor];
+        [lbl sizeToFit];
+    }];
+    
+    [self.view addSubview:label];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 @end

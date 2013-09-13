@@ -17,8 +17,7 @@
 		659C07D117E3B15600B47DBE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 659C07D017E3B15600B47DBE /* Default@2x.png */; };
 		659C07D317E3B15600B47DBE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 659C07D217E3B15600B47DBE /* Default-568h@2x.png */; };
 		659C07D617E3B15600B47DBE /* DRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 659C07D517E3B15600B47DBE /* DRViewController.m */; };
-		659C07D917E3B15600B47DBE /* DRViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659C07D717E3B15600B47DBE /* DRViewController_iPhone.xib */; };
-		659C07DC17E3B15600B47DBE /* DRViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 659C07DA17E3B15600B47DBE /* DRViewController_iPad.xib */; };
+		659C07E617E3B1AA00B47DBE /* NSObject+DRTap.m in Sources */ = {isa = PBXBuildFile; fileRef = 659C07E517E3B1AA00B47DBE /* NSObject+DRTap.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,8 +36,8 @@
 		659C07D217E3B15600B47DBE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		659C07D417E3B15600B47DBE /* DRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRViewController.h; sourceTree = "<group>"; };
 		659C07D517E3B15600B47DBE /* DRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRViewController.m; sourceTree = "<group>"; };
-		659C07D817E3B15600B47DBE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DRViewController_iPhone.xib; sourceTree = "<group>"; };
-		659C07DB17E3B15600B47DBE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DRViewController_iPad.xib; sourceTree = "<group>"; };
+		659C07E417E3B1AA00B47DBE /* NSObject+DRTap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+DRTap.h"; path = "DRTap/NSObject+DRTap.h"; sourceTree = "<group>"; };
+		659C07E517E3B1AA00B47DBE /* NSObject+DRTap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+DRTap.m"; path = "DRTap/NSObject+DRTap.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +57,7 @@
 		659C07B017E3B15600B47DBE = {
 			isa = PBXGroup;
 			children = (
+				659C07E217E3B15F00B47DBE /* DRTap */,
 				659C07C217E3B15600B47DBE /* DRTapDemo */,
 				659C07BB17E3B15600B47DBE /* Frameworks */,
 				659C07BA17E3B15600B47DBE /* Products */,
@@ -89,8 +89,6 @@
 				659C07CC17E3B15600B47DBE /* DRAppDelegate.m */,
 				659C07D417E3B15600B47DBE /* DRViewController.h */,
 				659C07D517E3B15600B47DBE /* DRViewController.m */,
-				659C07D717E3B15600B47DBE /* DRViewController_iPhone.xib */,
-				659C07DA17E3B15600B47DBE /* DRViewController_iPad.xib */,
 				659C07C317E3B15600B47DBE /* Supporting Files */,
 			);
 			path = DRTapDemo;
@@ -108,6 +106,15 @@
 				659C07D217E3B15600B47DBE /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		659C07E217E3B15F00B47DBE /* DRTap */ = {
+			isa = PBXGroup;
+			children = (
+				659C07E417E3B1AA00B47DBE /* NSObject+DRTap.h */,
+				659C07E517E3B1AA00B47DBE /* NSObject+DRTap.m */,
+			);
+			name = DRTap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +173,6 @@
 				659C07CF17E3B15600B47DBE /* Default.png in Resources */,
 				659C07D117E3B15600B47DBE /* Default@2x.png in Resources */,
 				659C07D317E3B15600B47DBE /* Default-568h@2x.png in Resources */,
-				659C07D917E3B15600B47DBE /* DRViewController_iPhone.xib in Resources */,
-				659C07DC17E3B15600B47DBE /* DRViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +186,7 @@
 				659C07C917E3B15600B47DBE /* main.m in Sources */,
 				659C07CD17E3B15600B47DBE /* DRAppDelegate.m in Sources */,
 				659C07D617E3B15600B47DBE /* DRViewController.m in Sources */,
+				659C07E617E3B1AA00B47DBE /* NSObject+DRTap.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,22 +199,6 @@
 				659C07C617E3B15600B47DBE /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		659C07D717E3B15600B47DBE /* DRViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				659C07D817E3B15600B47DBE /* en */,
-			);
-			name = DRViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		659C07DA17E3B15600B47DBE /* DRViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				659C07DB17E3B15600B47DBE /* en */,
-			);
-			name = DRViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
