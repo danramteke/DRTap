@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name         = "DRTap"
   s.version      = "1.0"
-  s.summary      = ".tap from Ruby implemented as a category on NSObject"
+  s.summary      = ".tap from Ruby implemented as a category on NSObject."
   s.homepage     = "http://github.com/danramteke/DRTap"
   s.license      = { :type => 'MIT', :file => 'LICENSE.txt' }
   s.authors      = { "Daniel Ramteke" => "dramteke@cyrusinnovation.com" }
