@@ -4,6 +4,10 @@ DRTap
 .tap from Ruby implemented as a category on NSObject
 
 
+Add this line to your Podfile:
+
+        pod 'DRTap'
+
 Example:
 
         #import "NSObject+DRTap.h"
