@@ -6,6 +6,10 @@ DRTap
 
 Example:
 
+        #import "NSObject+DRTap.h"
+        
+        // ...
+        
         UILabel* label = [[[UILabel alloc] init] tap:^(UILabel* lbl){
             lbl.text = @"Hello";
             lbl.textColor = [UIColor whiteColor];
